@@ -1,0 +1,65 @@
+.animate-fade-in {
+    animation: fadeInRight 1.2s ease-in-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.product-card {
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.main-img {
+    transition: 0.4s;
+}
+
+.hover-img {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product-card:hover .hover-img {
+    opacity: 1;
+}
+
+.icon-box {
+    opacity: 0;
+    transition: 0.3s;
+    color: #ffc107;
+    font-size: 20px;
+}
+
+.product-card:hover .icon-box {
+    opacity: 1;
+}
+
+.brands-section {
+    background-color: #f7f7f7;
+}
+
+.brand-logo {
+    max-height: 70px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.brand-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}

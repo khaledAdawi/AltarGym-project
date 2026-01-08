@@ -1,0 +1,109 @@
+.about-hero {
+    background: #111;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.commitment-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.quality-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stats-section {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+.partners-section {
+    padding: 60px 20px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-hero {
+    height: 60vh;
+    background: #000;
+    overflow: hidden;
+}
+
+
+.hero-title {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero {
+    height: 60vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../assets/images/about/aboutImg.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.stats-with-bg {
+    background-size: cover;
+    background-position: center;
+}
+
+.stats-overlay {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.stat-box h2 {
+    color: #ffc107;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
