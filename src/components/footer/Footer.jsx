@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="col-md-3">
                         <h5 className="fw-bold">Contact Us</h5>
                         <p>Rains HQ, Jens Olsens Vej 13, 8200 Aarhus N, Denmark</p>
-                        <p>Email: Gymex@domain.com</p>
+                        <p>Email: Altra@domain.com</p>
                         <p>Phone: (+49) 818703 2412</p>
                         <div className="social-icons mt-3">
                             <i class="fa-brands fa-tiktok me-2"></i>

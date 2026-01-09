@@ -35,6 +35,20 @@
     opacity: 1;
 }
 
+.product-card .main-img {
+    height: 220px;
+    object-fit: contain;
+    
+}
+
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 .icon-box {
     opacity: 0;
     transition: 0.3s;
