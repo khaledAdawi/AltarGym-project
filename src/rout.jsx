@@ -1,23 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import MainLayout from "./layout/MainLayout";
-import AuthLayout from "./layout/AuthLayout";
+
+
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
-import ProductManagement from "./pages/productManagement/ProductManagement";
-import Login from "./pages/login/Login";
+import Shop from "./pages/shop/Shop";
+import ProductDetails from "./pages/productManagement/ProductDetails";
+import Cart from "./pages/cart/Cart";
+import InventoryManagement from "./pages/inventory/inventoryManagement";
+import Purchases from "./pages/purchases/Purchases";
+import Payment from "./pages/payment/Payment";
 import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import ProductManagement from "./pages/productManagement/ProductManagement";
+import Analytics from "./pages/analytics/Analytics";
+
+
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
         children: [
+            
             {
-                index:true,
-                path: "home",         
+                index: true,
                 element: <Home />,
+            },
+            {
+                path: "home",
+                element: <Home />,
+            },
+            {
+                path: "shop",
+                element: <Shop />,
             },
             {
                 path: "about",
@@ -28,8 +47,8 @@ const router = createBrowserRouter([
                 element: <Contact />,
             },
             {
-                path: "productManagement",
-                element: <ProductManagement />,
+                path: "product/:id",
+                element: <ProductDetails />,
             },
             {
                 path: "login",
@@ -39,15 +58,61 @@ const router = createBrowserRouter([
                 path: "register",
                 element: <Register />,
             },
-        ],
-    },
 
-    {
-        path: "/auth",
-        element: <AuthLayout />,
-        children: [
             
+            {
+                path: "cart",
+                element: (
+                    <ProtectedRoute>
+                        <Cart />
+                    </ProtectedRoute>
+                ),
+            },
+
             
+            {
+                path: "inventory",
+                element: (
+                    <ProtectedRoute role="admin">
+                        <InventoryManagement />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: "purchases",
+                element: (
+                    <ProtectedRoute role="admin">
+                        <Purchases />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: "products",
+                element: (
+                    <ProtectedRoute role="admin">
+                        <ProductManagement />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: "analytics",
+                element: (
+                    <ProtectedRoute role="admin">
+                        <Analytics />
+                    </ProtectedRoute>
+                )
+            },
+
+
+            
+            {
+                path: "payment",
+                element: (
+                    <ProtectedRoute>
+                        <Payment />
+                    </ProtectedRoute>
+                ),
+            },
         ],
     },
 ]);

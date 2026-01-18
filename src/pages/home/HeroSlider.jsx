@@ -25,7 +25,7 @@ export default function HeroSlider() {
                         <div className="container text-white">
                             <div className="row align-items-center">
 
-                                {/* Text */}
+                                
                                 <div className="col-md-6">
                                     <p className="text-warning fw-bold">
                                         GET AN EXTRA 10% OFF

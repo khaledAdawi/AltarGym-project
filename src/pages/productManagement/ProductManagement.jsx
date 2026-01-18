@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance from "../../Api/axiosInstance";
 
 export default function ProductManagement() {
     const [activeTab, setActiveTab] = useState("products");
@@ -23,8 +23,8 @@ export default function ProductManagement() {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get(
-                "http://localhost/altragym_api/products/get.php"
+            const response = await axiosInstance.get(
+                "/products/get.php"
             );
             setProducts(response.data.data);
         } catch (error) {
@@ -35,8 +35,8 @@ export default function ProductManagement() {
     
     const handleAddProduct = async () => {
         try {
-            await axios.post(
-                "http://localhost/altragym_api/products/add.php",
+            await axiosInstance.post(
+                "/products/add.php",
                 formData
             );
 
@@ -54,8 +54,8 @@ export default function ProductManagement() {
             return;
 
         try {
-            await axios.post(
-                "http://localhost/altragym_api/products/delete.php",
+            await axiosInstance.post(
+                "/products/delete.php",
                 { id }
             );
             fetchProducts();
@@ -75,8 +75,8 @@ export default function ProductManagement() {
     const handleUpdateProduct = async () => {
         console.log("Updating:", formData);
         try {
-            await axios.post(
-                "http://localhost/altragym_api/products/update.php",
+            await axiosInstance.post(
+                "/products/update.php",
                 formData
             );
 

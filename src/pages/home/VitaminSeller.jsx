@@ -8,7 +8,7 @@ export default function VitaminSeller() {
     return (
         <section className="py-5 bg-light">
             <div className="container">
-                <h2 className="text-center fw-bold mb-5">VITAMINS</h2>
+                <h2 className="text-center fw-bold mb-5">Minerals</h2>
 
                 <div className="row g-4 justify-content-center">
                     <ProductCard

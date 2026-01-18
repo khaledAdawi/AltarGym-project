@@ -5,7 +5,7 @@ export default function AuthLayout() {
     return (
         <>
             <Outlet />
-            <div>this is auth footer</div>
+            
         </>
     )
 }

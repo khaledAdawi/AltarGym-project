@@ -1,0 +1,19 @@
+import { Navigate } from "react-router-dom";
+import { getUser } from "../utils/auth";
+
+export default function ProtectedRoute({ children, role }) {
+    const user = getUser();
+
+    
+    if (!user) {
+        return <Navigate to="/home" replace />;
+    }
+
+    
+    if (role && user.role !== role) {
+        return <Navigate to="/home" replace />;
+    }
+
+    
+    return children;
+}
