@@ -9,7 +9,7 @@ import Contact from "./pages/contact/Contact";
 import Shop from "./pages/shop/Shop";
 import ProductDetails from "./pages/productManagement/ProductDetails";
 import Cart from "./pages/cart/Cart";
-import InventoryManagement from "./pages/inventory/inventoryManagement";
+import InventoryManagement from "./pages/inventory/InventoryManagement";
 import Purchases from "./pages/purchases/Purchases";
 import Payment from "./pages/payment/Payment";
 import Register from "./pages/register/Register";
